@@ -43,6 +43,7 @@ services:
       - 3000:3000
     networks:
       - one-api_default
+      - fastgpt
     depends_on:
       - mongo
       - pg
