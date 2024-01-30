@@ -42,8 +42,8 @@ services:
     ports:
       - 3000:3000
     networks:
-      # - one-api_default
-      - fastgpt
+      - one-api_default
+      # - fastgpt
     depends_on:
       - mongo
       - pg
@@ -65,9 +65,9 @@ services:
     volumes:
       - ./config.json:/app/data/config.json
 networks:
-  # one-api_default:
-  #   external: true
-  fastgpt:
+  one-api_default:
+    external: true
+  # fastgpt:
     # host 版本, 不推荐。
     # version: '3.3'
     # services:
