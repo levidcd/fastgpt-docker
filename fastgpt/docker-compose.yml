@@ -10,8 +10,8 @@ services:
     ports:
       # 生产环境建议不要暴露
       - 5432:5432
-    # networks:
-      # - fastgpt
+    networks:
+      - fastgpt
     environment:
       # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
       - POSTGRES_USER=username
@@ -27,8 +27,8 @@ services:
     ports:
       # 生产环境建议不要暴露
       - 27017:27017
-    # networks:
-      # - fastgpt
+    networks:
+      - fastgpt
     environment:
       # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
       - MONGO_INITDB_ROOT_USERNAME=username
@@ -42,8 +42,8 @@ services:
     ports:
       - 3000:3000
     networks:
-      - one-api_default
       # - fastgpt
+      - one-api_default
     depends_on:
       - mongo
       - pg
@@ -67,7 +67,7 @@ services:
 networks:
   one-api_default:
     external: true
-  # fastgpt:
+  fastgpt:
     # host 版本, 不推荐。
     # version: '3.3'
     # services:
