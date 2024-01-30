@@ -42,7 +42,7 @@ services:
     ports:
       - 3000:3000
     networks:
-      # - fastgpt
+      - fastgpt
       - one-api_default
     depends_on:
       - mongo
