@@ -43,7 +43,7 @@ services:
       - 3000:3000
     networks:
       - one-api_default
-      # - fastgpt
+      - fastgpt
     depends_on:
       - mongo
       - pg
@@ -67,7 +67,7 @@ services:
 networks:
   one-api_default:
     external: true
-  # fastgpt:
+  fastgpt:
     # host 版本, 不推荐。
     # version: '3.3'
     # services:
