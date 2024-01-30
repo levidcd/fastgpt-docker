@@ -1,0 +1,5 @@
+.DS_Store
+pg/
+mongo/
+data/
+logs/
