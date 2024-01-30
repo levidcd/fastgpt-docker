@@ -52,7 +52,7 @@ services:
       - DEFAULT_ROOT_PSW=1234
       # 中转地址，如果是用官方号，不需要管。务必加 /v1
       - OPENAI_BASE_URL=http://host.docker.internal:3010/v1
-      - CHAT_API_KEY=sk-tz2kQv6k3h8JfO2N4110D0E457104c8f80A8Bd2732B466F4
+      - CHAT_API_KEY=sk-qtH1S1N2VREsSf6tB550B891A3Ec4037A3A8Cb12003037B8
       - DB_MAX_LINK=5 # database max link
       - TOKEN_KEY=any
       - ROOT_KEY=root_key
